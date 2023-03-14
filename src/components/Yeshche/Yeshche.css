@@ -1,0 +1,31 @@
+.yeshche {
+    width: 90%;
+    height: 166px;
+    margin: 0 auto;
+}
+
+.yeshche__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.yeshche__btn {
+    width: 320px;
+    height: 36px;
+    background-color: transparent;
+    background: #424242;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 500px){
+    .yeshche__btn {
+        width: 90%;
+        
+    
+    }
+}

@@ -1,0 +1,125 @@
+.register {
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register__header {
+
+    margin-top: 70px;
+}
+
+.register__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.register-input__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+.register-input__group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+.register__input {
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFFFFF;
+    background: #202020;
+    border: none;
+    background-color: transparent;
+}
+
+.register__span {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #EE3465;
+}
+
+.register__line {
+    width: 100%;
+    height: 1px;
+    background: #424242;
+    margin-top: 16px;
+    
+
+}
+
+.register-btn__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 69px;
+    margin-bottom: 70px;
+}
+
+
+
+.register__button {
+    max-width: 100%;
+    height: 45px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #4285F4;
+    border: none;
+    cursor: pointer;
+}
+
+.register-btn__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.register__paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8B8B8B;
+    margin: 0;
+    padding: 0;
+
+}
+
+.register-exit__button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4285F4;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    background: #202020;
+    border: none;
+
+}

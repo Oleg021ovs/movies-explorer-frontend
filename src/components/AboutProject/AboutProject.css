@@ -1,0 +1,279 @@
+.about-project {
+    width: 90%;
+    background: #202020;
+    margin: 0 auto;
+}
+
+.about-project__item {
+
+    margin: 0 auto;
+    margin-bottom: 110px;
+
+}
+
+.about-project__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    margin: 0;
+    margin-top: 110px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+}
+
+.about-project__line {
+    width: 100%;
+    height: 1px;
+    background: #DADADA;
+    margin: 0 auto;
+    margin-top: 23px;
+}
+
+.about-project__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 70px;
+    padding: 0;
+
+}
+
+.about-project__group {
+    max-width: 550px;
+
+}
+
+.about-project__description {
+
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 26px;
+
+}
+
+.about-project__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.about-project__week {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 81px;
+}
+
+.about-project__oneweek {
+    width: 100%;
+
+    background: #3DDC84;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.about-project__bakend {
+    height: 12px;
+    margin: 0;
+    margin-top: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 121%;
+    text-align: center;
+    color: #8B8B8B;
+
+}
+
+.about-project__groups {
+    max-width: 912px;
+}
+
+.about-project__fourweeks {
+    background: #303030;
+    margin: 0;
+    padding: 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.about-project__frontend {
+    height: 17px;
+    margin: 0;
+    margin-top: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #8B8B8B;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .about-project {
+        background: #202020;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__item {
+        width: 92%;
+        margin: 0 auto;
+
+
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .about-project__title {
+        margin: 0;
+        margin-top: 90px;
+
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__line {
+        max-width: 668px;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__container {
+        margin: 0 auto;
+        gap: 30px;
+        margin-top: 70px;
+        padding: 0;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__group {
+        max-width: 320px;
+
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__description {
+        max-width: 290px;
+        height: 48px;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 22px;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__text {
+        max-width: 290px;
+        font-size: 12px;
+        line-height: 150%;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-project__week {
+        margin-top: 93px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__item {
+        width: 92%;
+        margin: 0 auto;
+
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__container {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 56px;
+        margin-top: 60px;
+        padding: 0;
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__week {
+        grid-template-columns: 100px 1fr;
+
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__oneweek {
+        font-size: 11px;
+        line-height: 13px;
+
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__bakend {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__fourweeks {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .about-project__frontend {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+}
