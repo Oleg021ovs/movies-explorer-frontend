@@ -48,6 +48,7 @@
 .footer__group {
     display: flex;
     margin: 0;
+    gap: 20px;
 }
 
 .footer__practicum {
@@ -55,7 +56,6 @@
     font-size: 13px;
     line-height: 16px;
     margin: 0;
-    text-align: right;
     color: #FFFFFF;
 
 }
