@@ -13,7 +13,10 @@ export default function Footer() {
         <div className="footer__container">
           <p className="footer__copyright">&copy;2023</p>
           <div className="footer__group">
-            <p className="footer__practicum">Яндекс.Практикум</p>
+            <Link to="https://practicum.yandex.ru/learn/web/">
+              <p className="footer__practicum">Яндекс.Практикум</p>
+            </Link>
+
             <Link to="https://github.com/Oleg021ovs">
               <p className="footer__github">Github</p>
             </Link>

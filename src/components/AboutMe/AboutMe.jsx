@@ -38,7 +38,7 @@ export default function AboutMe() {
           <div className="aboutme__site-group">
             <div className="aboutme__site-text">Статичный сайт</div>
           </div>
-          <Link to="/" className="aboutme__btn">
+          <Link to="https://oleg021ovs.github.io/how-to-learn/" className="aboutme__btn">
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
@@ -47,7 +47,7 @@ export default function AboutMe() {
           <div className="aboutme__site-group">
             <div className="aboutme__site-text">Адаптивный сайт</div>
           </div>
-          <Link to="/" className="aboutme__btn">
+          <Link to="https://oleg021ovs.github.io/russian-travel/" className="aboutme__btn">
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
@@ -56,7 +56,7 @@ export default function AboutMe() {
           <div className="aboutme__site-group">
             <div className="aboutme__site-text">Одностраничное приложение</div>
           </div>
-          <Link to="/" className="aboutme__btn">
+          <Link to="https://oleg021ovs.github.io/mesto-react/" className="aboutme__btn">
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
