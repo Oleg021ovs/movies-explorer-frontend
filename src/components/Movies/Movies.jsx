@@ -12,10 +12,6 @@ import card4 from "../../images/card4.svg";
 import card5 from "../../images/card5.svg";
 import card6 from "../../images/card6.svg";
 import card7 from "../../images/card7.svg";
-import card8 from "../../images/card8.svg";
-import card9 from "../../images/card9.svg";
-import card10 from "../../images/card10.svg";
-import card11 from "../../images/card11.svg";
 import card12 from "../../images/card12.svg";
 import card13 from "../../images/card13.svg";
 import card14 from "../../images/card14.svg";
@@ -62,26 +58,7 @@ export default function Movies({ loggenIn }) {
           moviesTitle="Когда я думаю о Германии ночью"
           moviesDuration="1ч42м"
         />
-        <MoviesCard
-          moviesImages={card8}
-          moviesTitle="Gimme Danger: История Игги и The Stooges"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card9}
-          moviesTitle="Дженис: Маленькая девочка грустит"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card10}
-          moviesTitle="Соберись перед прыжком"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card11}
-          moviesTitle="Пи Джей Харви: A dog called money"
-          moviesDuration="1ч42м"
-        />
+        
         <MoviesCard
           moviesImages={card12}
           moviesTitle="По волнам: Искусство звука в кино"

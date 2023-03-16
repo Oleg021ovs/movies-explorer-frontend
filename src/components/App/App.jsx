@@ -6,6 +6,7 @@ import Login from "../Login/Login";
 import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
+import NotFound from "../NotFound/NotFound";
 import "./App.css";
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />}/>
         <Route path="/movies" element={<Movies loggenIn={loggenIn} />}/>
         <Route path="/saved-movies" element={<SavedMovies loggenIn={loggenIn} />}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>
   );

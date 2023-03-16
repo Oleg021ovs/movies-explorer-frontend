@@ -66,6 +66,7 @@ export default function Register() {
           >
             Зарегистрироваться
           </button>
+
           <div className="register-btn__group">
             <p className="register__paragraph">Уже зарегистрированы?</p>
             <Link to="/sign-in" className="register-exit__link">

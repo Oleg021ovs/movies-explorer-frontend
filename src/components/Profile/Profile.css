@@ -113,3 +113,32 @@
     border: none;
     cursor: pointer;
 }
+
+
+@media (max-width: 550px) and (min-width: 320px) {
+    .profile {
+      margin: 56px auto 0;
+      width: 260px;
+      height: 90vh;
+      align-items: center;
+    }
+}
+
+
+
+    @media (max-width: 550px) and (min-width: 320px) {
+        .profile__container {
+          margin: 56px auto 0;
+          width: 260px;
+          height: 90vh;
+          align-items: center;
+        }
+    }
+
+    @media (max-width: 550px) and (min-width: 320px) {
+        .profile-btn__container {
+            width: 100%;
+        }
+    }
+
+    
