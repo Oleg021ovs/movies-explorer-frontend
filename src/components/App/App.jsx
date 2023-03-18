@@ -6,7 +6,7 @@ import Login from "../Login/Login";
 import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
-import NotFound from "../NotFound/NotFound";
+import NotFound from "../notfound/NotFound";
 import "./App.css";
 export default function App() {
 

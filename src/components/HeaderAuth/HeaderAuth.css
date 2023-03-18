@@ -26,6 +26,11 @@
     text-decoration: none;
 }
 
+.header__film:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+}
+
 .header__film_active {
     font-weight: 400;
     font-size: 13px;
@@ -33,6 +38,8 @@
     color: #FFFFFF;
     text-decoration: none;
 }
+
+
 
 .header__profile {
     width: 100px;

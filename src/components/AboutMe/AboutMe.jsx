@@ -6,7 +6,7 @@ import arrow from "../../images/arrow.svg";
 
 export default function AboutMe() {
   return (
-    <section className="aboutme">
+    <section className="aboutme" id="aboutme">
       <div className="aboutme__item">
         <h3 className="aboutme__description">Студент</h3>
         <div className="aboutme__line"></div>
@@ -24,7 +24,7 @@ export default function AboutMe() {
             <h4 className="aboutme__link-text">
               <Link
                 to="https://github.com/Oleg021ovs"
-                className="aboutme__link"
+                target="_blank" className="aboutme__link"
               >
                 Github
               </Link>
@@ -36,27 +36,27 @@ export default function AboutMe() {
 
         <div className="aboutme__site">
           <div className="aboutme__site-group">
-            <div className="aboutme__site-text">Статичный сайт</div>
+            <Link to="https://oleg021ovs.github.io/how-to-learn/" target="_blank" className="aboutme__site-link"><div className="aboutme__site-text">Статичный сайт</div></Link>
           </div>
-          <Link to="https://oleg021ovs.github.io/how-to-learn/" className="aboutme__btn">
+          <Link to="https://oleg021ovs.github.io/how-to-learn/" target="_blank" className="aboutme__btn">
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
         <div className="aboutme__site-line"></div>
-        <div className="aboutme__site">
+        <div className="aboutme__site-adaptiv">
           <div className="aboutme__site-group">
-            <div className="aboutme__site-text">Адаптивный сайт</div>
+          <Link to="https://oleg021ovs.github.io/russian-travel/" target="_blank" className="aboutme__site-link"><div className="aboutme__site-text">Адаптивный сайт</div></Link>
           </div>
-          <Link to="https://oleg021ovs.github.io/russian-travel/" className="aboutme__btn">
+          <Link to="https://oleg021ovs.github.io/russian-travel/" target="_blank" className="aboutme__btn">
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
-        <div className="aboutme__site-line"></div>
-        <div className="aboutme__site">
+        <div className="aboutme__site-line_adaptiv"></div>
+        <div className="aboutme__site-application">
           <div className="aboutme__site-group">
-            <div className="aboutme__site-text">Одностраничное приложение</div>
+          <Link to="https://oleg021ovs.github.io/mesto-react/" target="_blank" className="aboutme__site-link"><div className="aboutme__site-text">Одностраничное приложение</div></Link>
           </div>
-          <Link to="https://oleg021ovs.github.io/mesto-react/" className="aboutme__btn">
+          <Link to="https://oleg021ovs.github.io/mesto-react/" target="_blank" className="aboutme__btn">
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>

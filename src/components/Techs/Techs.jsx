@@ -2,15 +2,17 @@ import "./Techs.css";
 
 export default function Techs() {
   return (
-    <section className="techs">
+    <section className="techs" id="techs">
       <div className="techs__item">
         <h2 className="techs__description">Технологии</h2>
         <div className="techs__line"></div>
         <div className="techs__container">
           <h1 className="techs__title">7 технологий</h1>
           <p className="techs__text">
-            На курсе веб-разработки мы освоили технологии, которые применили в
-            дипломном проекте.
+            На курсе веб-разработки мы освоили технологии, которые применили 
+          </p>
+          <p className="techs__text">
+           в дипломном проекте.
           </p>
         </div>
         <nav className="techs__menu">

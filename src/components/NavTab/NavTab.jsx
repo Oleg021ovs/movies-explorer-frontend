@@ -6,18 +6,18 @@ export default function NavTab() {
     <section className="navtab">
       <ul className="navtab__container">
         <li className="navtab__list">
-          {" "}
-          <a className="navtab__link" href="#Promo">
+          
+          <a className="navtab__link" href="#about-project">
             О проекте
           </a>
         </li>
         <li className="navtab__list">
-          <a className="navtab__link" href="#Techs">
+          <a className="navtab__link" href="#techs">
             Технологии
           </a>
         </li>
         <li className="navtab__list">
-          <a className="navtab__link" href="#AboutMe">
+          <a className="navtab__link" href="#aboutme">
             Студент
           </a>
         </li>

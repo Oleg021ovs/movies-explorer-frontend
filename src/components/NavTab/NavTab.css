@@ -29,6 +29,12 @@
     line-height: 16px;
 }
 
+.navtab__link:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
 @media screen and (max-width: 550px){
     .navtab__list{
         width: 82px;

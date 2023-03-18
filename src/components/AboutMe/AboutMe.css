@@ -6,7 +6,6 @@
 
 .aboutme__item {
     margin: 0 auto;
-    margin-top: 110px;
 }
 
 .aboutme__description {
@@ -16,6 +15,7 @@
     letter-spacing: -0.04em;
     color: #FFFFFF;
     margin: 0;
+    margin-top: 10px;
 }
 
 .aboutme__line {
@@ -30,6 +30,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 66px;
+}
+
+.aboutme__group{
+    width: 53%;
+    
 }
 
 .aboutme__name {
@@ -56,7 +61,6 @@
 .aboutme__biography {
     margin: 0;
     padding-top: 26px;
-    height: 88px;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -77,6 +81,12 @@
     color: #FFFFFF;
     margin-top: 99px;
     text-decoration: none;
+}
+
+.aboutme__link:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
 }
 
 .about__portfolio {
@@ -101,14 +111,39 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .aboutme__site-group {
     margin: 0;
-
+    display: flex;
 
 }
+
+.aboutme__site-link{
+    text-decoration: none;
+}
+
+.aboutme__site-link:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
+.aboutme__site-adaptiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.aboutme__site-application {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 24px;
+}
+
 
 .aboutme__site-text {
     height: 50px;
@@ -126,16 +161,35 @@
     height: 1px;
     background: #424242;
     margin: 0 auto;
+    margin-top: 14px;
 }
 
+.aboutme__site-line_adaptiv{
+    width: 100%;
+    height: 1px;
+    background: #424242;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.aboutme__btn{
+    align-self: center;
+}
+
+.aboutme__btn:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
+
 .aboutme__arrow {
-    width: 29px;
-    height: 60px;
     font-weight: 400;
     font-size: 30px;
     line-height: 60px;
     letter-spacing: -0.04em;
     color: #FFFFFF;
+    text-align: center;
 
 }
 

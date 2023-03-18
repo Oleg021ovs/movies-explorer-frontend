@@ -1,11 +1,9 @@
 import "./SavedMovies.css";
-//import Navigation from "../Navigation/Navigation";
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
-import MoviesCard from "../MoviesCard/MoviesCard";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-
-import Yeshche from "../Yeshche/Yeshche";
+import MoviesCard from "../MoviesCard/MoviesCard";
+import Preloader from "../Preloader/Preloader";
 import Footer from "../Footer/Footer";
 import card from "../../images/card1.svg";
 import card2 from "../../images/card2.svg";
@@ -34,7 +32,7 @@ export default function Movies({ loggenIn }) {
             moviesDuration="1ч42м"
           />
         </MoviesCardList>
-        <Yeshche />
+        <Preloader/>
       </main>
 
       <Footer />

@@ -1,6 +1,7 @@
 import "./MoviesCard.css";
 
 import like from "../../images/like.svg";
+//import deleteBtn from "../../images/delete.svg";
 export default function MoviesCard({
   moviesImages,
   moviesTitle,
@@ -16,13 +17,17 @@ export default function MoviesCard({
           <div className="movies-card__container">
             <h3 className="movies-card__title">{moviesTitle}</h3>
             <img className="movies-card__likes" src={like} alt="лайк" />
+            
           </div>
-          <div className="movies-card__group">
-            <div className="movies-card__line"></div>
-            <div className="movies-card__duration">{moviesDuration}</div>
-          </div>
+          
         </div>
+        <div className="movies-card__group">
+      <div className="movies-card__duration">{moviesDuration}</div>
+
+      </div>
       </li>
+      
+      
     </>
   );
 }

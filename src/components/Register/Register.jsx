@@ -33,9 +33,10 @@ export default function Register() {
             <div className="register-input__group">
               <input
                 className="register__input"
+                name="email"
                 type="email"
                 placeholder="E-mail"
-                required
+                required=""
               />
             </div>
           </div>
@@ -46,10 +47,11 @@ export default function Register() {
                 className="register__input"
                 type="password"
                 name="password"
+                required
                 placeholder="Пароль"
                 minLength="2"
                 maxLength="40"
-                required
+               
               />
             </div>
           </div>

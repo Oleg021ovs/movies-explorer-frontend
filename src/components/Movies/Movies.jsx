@@ -84,6 +84,26 @@ export default function Movies({ loggenIn }) {
           moviesTitle="33 слова о дизайне"
           moviesDuration="1ч42м"
         />
+        <MoviesCard
+          moviesImages={card12}
+          moviesTitle="Рудбой"
+          moviesDuration="1ч42м"
+        />
+        <MoviesCard
+          moviesImages={card13}
+          moviesTitle="Скейт — кухня"
+          moviesDuration="1ч42м"
+        />
+        <MoviesCard
+          moviesImages={card14}
+          moviesTitle="Война искусств"
+          moviesDuration="1ч42м"
+        />
+        <MoviesCard
+          moviesImages={card}
+          moviesTitle="33 слова о дизайне"
+          moviesDuration="1ч42м"
+        />
       </MoviesCardList>
       <Yeshche />
 

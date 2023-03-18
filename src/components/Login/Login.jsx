@@ -10,7 +10,7 @@ export default function Login() {
           <Link to="/" className="login__header-btn">
             <img className="login__header-logo" src={logo} alt="логотип" />
           </Link>
-          <h1 className="login__title">Добро пожаловать!</h1>
+          <h1 className="login__title">Рады видеть!</h1>
         </div>
 
         <div className="login__container">
