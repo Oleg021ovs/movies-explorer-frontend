@@ -24,7 +24,8 @@ export default function AboutMe() {
             <h4 className="aboutme__link-text">
               <Link
                 to="https://github.com/Oleg021ovs"
-                target="_blank" className="aboutme__link"
+                target="_blank"
+                className="aboutme__link"
               >
                 Github
               </Link>
@@ -42,21 +43,43 @@ export default function AboutMe() {
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
-        <div className="aboutme__site-line"></div>
+        
         <div className="aboutme__site-adaptiv">
           <div className="aboutme__site-group">
-          <Link to="https://oleg021ovs.github.io/russian-travel/" target="_blank" className="aboutme__site-link"><div className="aboutme__site-text">Адаптивный сайт</div></Link>
+            <Link
+              to="https://oleg021ovs.github.io/russian-travel/"
+              target="_blank"
+              className="aboutme__site-link"
+            >
+              <div className="aboutme__site-text">Адаптивный сайт</div>
+            </Link>
           </div>
-          <Link to="https://oleg021ovs.github.io/russian-travel/" target="_blank" className="aboutme__btn">
+          <Link
+            to="https://oleg021ovs.github.io/russian-travel/"
+            target="_blank"
+            className="aboutme__btn"
+          >
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>
-        <div className="aboutme__site-line_adaptiv"></div>
+        
         <div className="aboutme__site-application">
           <div className="aboutme__site-group">
-          <Link to="https://oleg021ovs.github.io/mesto-react/" target="_blank" className="aboutme__site-link"><div className="aboutme__site-text">Одностраничное приложение</div></Link>
+            <Link
+              to="https://oleg021ovs.github.io/mesto-react/"
+              target="_blank"
+              className="aboutme__site-link"
+            >
+              <div className="aboutme__site-text">
+                Одностраничное приложение
+              </div>
+            </Link>
           </div>
-          <Link to="https://oleg021ovs.github.io/mesto-react/" target="_blank" className="aboutme__btn">
+          <Link
+            to="https://oleg021ovs.github.io/mesto-react/"
+            target="_blank"
+            className="aboutme__btn"
+          >
             <img className="aboutme__arrow" src={arrow} alt="стрелка" />
           </Link>
         </div>

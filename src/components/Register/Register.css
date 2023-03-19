@@ -1,5 +1,5 @@
 .register {
-    width: 35%;
+    width: 30%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -7,6 +7,7 @@
 }
 
 .register__header {
+width: 100%;
 
     margin-top: 70px;
 }
@@ -22,10 +23,11 @@
 
 .register-input__container {
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 38px;
 }
 
 
@@ -33,21 +35,57 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-
+    position: relative;
 }
 
-
-.register__input {
-    width: 100%;
+.register-input__name {
     text-align: left;
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8B8B8B;
+}
+
+.register-input__email {
+    text-align: left;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8B8B8B;
+}
+
+.register-input__password {
+    text-align: left;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8B8B8B;
+}
+
+.register__input {
+    width: 100%;
+    height: 32px;
+    padding-top: 5px;
     color: #FFFFFF;
     background: #202020;
     border: none;
     background-color: transparent;
+    border-bottom: 1px solid rgba(66, 66, 66, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
+
+
 
 .register__span {
     font-weight: 400;
@@ -56,14 +94,7 @@
     color: #EE3465;
 }
 
-.register__line {
-    width: 100%;
-    height: 1px;
-    background: #424242;
-    margin-top: 16px;
-    
 
-}
 
 .register-btn__container {
     display: flex;
@@ -72,7 +103,7 @@
     gap: 16px;
     font-size: 13px;
     line-height: 16px;
-    margin-top: 179px;
+    margin-top: 130px;
     margin-bottom: 70px;
 }
 
@@ -93,12 +124,17 @@
     cursor: pointer;
 }
 
+.register__button:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
 .register-btn__group {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
-    margin-top: 16px;
 }
 
 .register__paragraph {
@@ -124,53 +160,78 @@
 
 }
 
-@media (max-width: 550px) and (min-width: 320px) {
-    .register {
-      margin: 56px auto 0;
-      width: 260px;
-      height: 90vh;
-      align-items: center;
+.register-exit__button:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
+@media (max-width: 888px) and (min-width: 320px) {
+    .register__paragraph {
+        font-size: 12px;
+        line-height: 15px;
+
     }
 }
 
-@media (max-width: 550px) and (min-width: 320px) {
+@media (max-width: 888px) and (min-width: 320px) {
+    .register-exit__button {
+        font-size: 12px;
+        line-height: 15px;
+
+    }
+}
+
+@media (max-width: 755px) and (min-width: 320px) {
+    .register {
+        width: 300px;
+        min-height: 100vh;
+        align-items: center;
+        
+    }
+}
+
+@media (max-width: 755px) and (min-width: 320px) {
     .register__header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+    }
+}
+
+@media (max-width: 755px) and (min-width: 320px) {
+    .register__container {
+        width: 100%;
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 755px) and (min-width: 320px) {
+    .register-btn__container {
+        width: 100%;
+        margin: 0;
+        margin-top: 157px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media (max-width: 755px) and (min-width: 320px) {
+    .register__paragraph {
+        font-size: 12px;
+        line-height: 15px;
 
     }
 }
 
-    @media (max-width: 550px) and (min-width: 320px) {
-        .register__container {
-          margin: 56px auto 0;
-          width: 260px;
-          height: 100vh;
-          align-items: center;
-        }
-    }
+@media (max-width: 755px) and (min-width: 320px) {
+    .register-exit__button {
+        font-size: 12px;
+        line-height: 15px;
 
-    @media (max-width: 550px) and (min-width: 320px) {
-        .register-btn__container {
-            width: 100%;
-        }
     }
-
-
-    @media (max-width: 550px) and (min-width: 320px) {
-        .register__paragraph {
-            font-size: 12px;
-            line-height: 15px;
-        
-        }
-    }
-
-    @media (max-width: 550px) and (min-width: 320px) {
-        .register-exit__button {
-            font-size: 12px;
-            line-height: 15px;
-        
-        }
-    }
-    
+}

@@ -11,77 +11,76 @@ export default function Register() {
             <img className="register__header-logo" src={logo} alt="логотип" />
           </Link>
           <h1 className="register__title">Добро пожаловать!</h1>
-        </div>
 
-        <div className="register__container">
+          
+        </div>
+        <form className="register__container">
           <div className="register-input__container">
             <div className="register-input__group">
+              <label className="register-input__name">Имя</label>
               <input
                 className="register__input"
                 type="text"
-                id="register-name"
-                name="register-name"
-                placeholder="Имя"
+                name="name"
                 minLength="2"
                 maxLength="40"
                 required
               />
             </div>
           </div>
-          <div className="register__line"></div>
           <div className="register-input__container">
             <div className="register-input__group">
+              <label className="register-input__email">E-mail</label>
               <input
+                type="email"
                 className="register__input"
                 name="email"
-                type="email"
-                placeholder="E-mail"
-                required=""
+                required
               />
             </div>
           </div>
-          <div className="register__line"></div>
           <div className="register-input__container">
             <div className="register-input__group">
+              <label className="register-input__password">Пароль</label>
               <input
                 className="register__input"
                 type="password"
                 name="password"
                 required
-                placeholder="Пароль"
                 minLength="2"
                 maxLength="40"
-               
               />
             </div>
           </div>
 
-          <div className="register__line"></div>
           <span className="register__span">Что-то пошло не так...</span>
-        </div>
 
-        <div className="register-btn__container">
-          <button
-            aria-label="Зарегистрироваться"
-            type="submit"
-            className="register__button"
-          >
-            Зарегистрироваться
-          </button>
+          <div className="register-btn__container">
+            <button
+              aria-label="Зарегистрироваться"
+              type="submit"
+              className="register__button"
+            >
+              Зарегистрироваться
+            </button>
 
-          <div className="register-btn__group">
-            <p className="register__paragraph">Уже зарегистрированы?</p>
-            <Link to="/sign-in" className="register-exit__link">
-              <button
-                aria-label="выйти из профиля"
-                type="submit"
-                className="register-exit__button"
-              >
-                Войти
-              </button>
-            </Link>
+            <div className="register-btn__group">
+              <p className="register__paragraph">Уже зарегистрированы?</p>
+              <Link to="/sign-in" className="register-exit__link">
+                <button
+                  aria-label="выйти из профиля"
+                  type="submit"
+                  className="register-exit__button"
+                >
+                  Войти
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
+        </form>
+        
+
+        
       </main>
     </>
   );

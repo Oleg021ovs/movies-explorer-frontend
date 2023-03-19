@@ -32,9 +32,9 @@
     margin-top: 66px;
 }
 
-.aboutme__group{
+.aboutme__group {
     width: 53%;
-    
+
 }
 
 .aboutme__name {
@@ -112,7 +112,15 @@
     justify-content: space-between;
     margin: 0;
     padding-top: 50px;
+    border-bottom: 1px solid  rgba(230, 230, 230, 1);
 }
+
+.aboutme__site:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
 
 .aboutme__site-group {
     margin: 0;
@@ -120,28 +128,39 @@
 
 }
 
-.aboutme__site-link{
+
+
+.aboutme__site-link {
     text-decoration: none;
 }
 
-.aboutme__site-link:hover {
-    transition: opacity 0.4s ease;
-    opacity: 0.5;
-
-}
 
 .aboutme__site-adaptiv {
     display: flex;
     justify-content: space-between;
     margin: 0;
     padding-top: 20px;
+    border-bottom: 1px solid  rgba(230, 230, 230, 1);
+}
+
+.aboutme__site-adaptiv:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
 }
 
 .aboutme__site-application {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding-top: 24px;
+}
+
+.aboutme__site-application:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
 }
 
 
@@ -156,31 +175,11 @@
 
 }
 
-.aboutme__site-line {
-    width: 100%;
-    height: 1px;
-    background: #424242;
-    margin: 0 auto;
-    margin-top: 14px;
-}
 
-.aboutme__site-line_adaptiv{
-    width: 100%;
-    height: 1px;
-    background: #424242;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-
-.aboutme__btn{
+.aboutme__btn {
     align-self: center;
 }
 
-.aboutme__btn:hover {
-    transition: opacity 0.4s ease;
-    opacity: 0.5;
-
-}
 
 
 .aboutme__arrow {
@@ -194,21 +193,21 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__item {
         margin: 0 auto;
-        margin-top: 90px;
+        margin-top: 25px;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__name {
         font-size: 40px;
         line-height: 100%;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__speciality {
         font-size: 12px;
         line-height: 150%;
@@ -216,7 +215,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__biography {
         font-size: 12px;
         line-height: 150%;
@@ -226,20 +225,20 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__link-text {
 
         padding-top: 87px;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .about__portfolio {
         margin-top: 91px;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__avatar {
         width: 255px;
         height: 307px;
@@ -248,13 +247,13 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__site {
         padding-top: 19px;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__site-text {
         font-size: 28px;
         line-height: 50px;
@@ -262,7 +261,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     .aboutme__arrow {
         width: 27px;
         height: 60px;
@@ -273,7 +272,7 @@
 
 @media screen and (max-width: 650px) {
     .aboutme__item {
-        
+
         width: 90%;
     }
 }
@@ -282,7 +281,8 @@
     .aboutme__container {
         flex-direction: column-reverse;
         margin: 0 auto;
-        
+        margin-top: 60px;
+
     }
 }
 
@@ -290,7 +290,155 @@
     .aboutme__avatar {
         width: 98%;
         height: 352px;
+
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__item {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__description {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__line {
+        width: 98%;
+        margin-top: 28px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__container {
+        margin-top: 60px;
+
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__avatar {
+        width: 98%;
+        height: 352px;
+
+
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__group {
+        width: 98%;
+
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__group {
+        width: 98%;
+        margin-top: 40px;
+
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__name {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__speciality {
+        font-size: 11px;
+        line-height: 16px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__biography {
+        font-size: 11px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__link-text {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .about__portfolio {
+        margin-top: 70px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__site {
+        padding-top: 25px;
+        width: 98%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__site-text {
+        font-size: 18px;
+        line-height: 28px;
+
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__btn {
+        align-self: center;
         
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__arrow {
+        width: 12px;
+        font-size: 18px;
+        line-height: 156%;
+        
+    }
+}
+
+
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__site-adaptiv {
+        margin: 0;
+        padding: 0;
+        width: 98%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__site-application {
+    margin: 0;
+    padding: 0;
+    width: 98%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .aboutme__site-group {
+        margin-top: 15px;
+    
     }
 }
 

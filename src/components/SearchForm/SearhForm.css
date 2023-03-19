@@ -42,6 +42,12 @@
     margin-left: 10px;
 }
 
+.searchform__btn:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
 .search-form__checkbox-container{
     display: flex;
     justify-content: center;
@@ -87,7 +93,7 @@
 
 @media screen and (max-width: 500px) {
     .search-form{
-        width: 88%;
+        width: 94%;
        margin: 0 auto;
     }
 
@@ -98,6 +104,17 @@
         padding: 0;
         margin: 0;
         width: 96%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .search-form__checkbox-container{
+        gap: 12px;
+        margin: 0 auto;
+        margin-top: 45px;
+        width: 107%;
+        
     }
 
 }
@@ -119,3 +136,4 @@
     }
 
 }
+

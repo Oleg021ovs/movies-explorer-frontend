@@ -17,7 +17,7 @@ export default function App() {
         <Route exact path="/" element={<Main/>}/>
         <Route path="/sign-up" element={<Register />}/>
         <Route path="/sign-in" element={<Login />}></Route>
-        <Route path="/profile" element={<Profile />}/>
+        <Route path="/profile" element={<Profile loggenIn={loggenIn}/>}/>
         <Route path="/movies" element={<Movies loggenIn={loggenIn} />}/>
         <Route path="/saved-movies" element={<SavedMovies loggenIn={loggenIn} />}/>
         <Route path="*" element={<NotFound/>}/>

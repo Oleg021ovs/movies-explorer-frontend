@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 //import Navigation from "../Navigation/Navigation";
 import Header from "../Header/Header";
-export default function Profile() {
+export default function Profile({loggenIn}) {
   return (
     <>
-      <Header />
+      <Header loggenIn={loggenIn}/>
       <main className="profile">
         <h1 className="profile__title">Привет, Виталий!</h1>
         <div className="profile__container">
           <div className="profile-input__container">
             <div className="profile-input__group">
-              <span className="profile__text">Имя</span>
+              <label className="profile__text">Имя</label>
               <input
                 className="profile__input"
                 type="text"
@@ -25,10 +25,10 @@ export default function Profile() {
               />
             </div>
           </div>
-          <div className="profile__line"></div>
+          
           <div className="profile-input__container">
             <div className="profile-input__group">
-              <span className="profile__text">E-mail</span>
+              <label className="profile__text">E-mail</label>
               <input
                 className="profile__input"
                 type="email"

@@ -71,6 +71,9 @@
     color: #FFFFFF;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 
 .about-project__week {
@@ -141,6 +144,7 @@
 
 @media screen and (max-width: 1024px) {
     .about-project {
+        width: 96%;
         background: #202020;
         margin: 0 auto;
     }
@@ -150,21 +154,14 @@
     .about-project__item {
         width: 92%;
         margin: 0 auto;
-
-
-    }
-}
-
-
-
-@media screen and (max-width: 1024px) {
-    .about-project__title {
-        margin: 0;
-        margin-top: 90px;
-
+margin-top: 70px;
 
     }
 }
+
+
+
+
 
 @media screen and (max-width: 1024px) {
     .about-project__line {
@@ -179,13 +176,13 @@
         gap: 30px;
         margin-top: 70px;
         padding: 0;
-
+      width: 100%;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .about-project__group {
-        max-width: 320px;
+    width: 100%;
 
     }
 
@@ -193,7 +190,7 @@
 
 @media screen and (max-width: 1024px) {
     .about-project__description {
-        max-width: 290px;
+        max-width: 319px;
         height: 48px;
         font-size: 20px;
         line-height: 24px;
@@ -204,9 +201,9 @@
 
 @media screen and (max-width: 1024px) {
     .about-project__text {
-        max-width: 290px;
         font-size: 12px;
         line-height: 150%;
+        max-width: 319px;
 
     }
 }
@@ -218,63 +215,54 @@
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) and (min-width: 320px){
     .about-project__item {
-        width: 92%;
-        margin: 0 auto;
-
-
+        margin-top: 40px;
+        width: 90%;
+        
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) and (min-width: 320px){
+    .about-project__title {
+        
+        font-size: 18px;
+line-height: 22px;
+        
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
     .about-project__container {
         flex-direction: column;
-        margin: 0 auto;
-        gap: 56px;
         margin-top: 60px;
-        padding: 0;
-
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .about-project__description {
+        font-size: 18px;
+line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .about-project__text {
+        font-size: 11px;
+line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
     .about-project__week {
-        grid-template-columns: 100px 1fr;
-
+        width: 98%;
     }
-
 }
 
-@media screen and (max-width: 550px) {
-    .about-project__oneweek {
-        font-size: 11px;
-        line-height: 13px;
-
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .about-project__week {
+        width: 98%;
+        grid-template-columns: 1fr 2fr;
     }
-
 }
 
-@media screen and (max-width: 550px) {
-    .about-project__bakend {
-        font-size: 11px;
-        line-height: 13px;
-    }
-
-}
-
-@media screen and (max-width: 550px) {
-    .about-project__fourweeks {
-        font-size: 11px;
-        line-height: 13px;
-    }
-
-}
-
-@media screen and (max-width: 550px) {
-    .about-project__frontend {
-        font-size: 11px;
-        line-height: 13px;
-    }
-
-}

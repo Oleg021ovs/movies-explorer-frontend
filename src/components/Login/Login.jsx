@@ -13,36 +13,34 @@ export default function Login() {
           <h1 className="login__title">Рады видеть!</h1>
         </div>
 
-        <div className="login__container">
+        <form className="login__container">
           <div className="login-input__container">
             <div className="login-input__group">
+            <label className="login-input__email">E-mail</label>
               <input
                 className="login__input"
                 type="email"
-                placeholder="E-mail"
+                name="email"
                 required
               />
             </div>
           </div>
-          <div className="login__line"></div>
+          
           <div className="login-input__container">
             <div className="login-input__group">
+            <label className="login-input__password">Пароль</label>
               <input
                 className="login__input"
                 type="password"
                 name="password"
-                placeholder="Пароль"
+                required
                 minLength="2"
                 maxLength="40"
-                required
               />
             </div>
           </div>
 
-          <div className="login__line"></div>
-        </div>
-
-        <div className="login-btn__container">
+          <div className="login-btn__container">
           <Link to="/movies" className="login-link__entrance">
             <button aria-label="Войти" type="submit" className="login__button">
               Войти
@@ -62,6 +60,9 @@ export default function Login() {
             </Link>
           </div>
         </div>
+        </form>
+
+        
       </main>
     </>
   );
