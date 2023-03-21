@@ -1,20 +1,18 @@
-.promo{
+.promo {
     background-color: #272727;
-    width: 94%;
+    max-width: 1200px;
     margin: 0 auto;
-    margin-top: 38px;
-    padding-bottom: 48px;
-    
+    margin-top: 51px;
+    margin-bottom: 18px;
+
 
 }
 
-.promo__title{
-    width: 60%;
+.promo__title {
+    max-width: 730px;
     margin: 0 auto;
-    padding: 0;
     padding-top: 142px;
     padding-bottom: 151px;
-    text-align: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -23,23 +21,34 @@
     text-align: center;
     letter-spacing: -0.04em;
     color: #FFFFFF;
-    
+
 }
 
-@media screen and (max-width: 1024px){
-    .promo{
+@media screen and (max-width: 1024px) {
+    .promo {
         width: 98%;
         margin: 0 auto;
     }
 }
 
 
-@media screen and (max-width: 1024px){
-    .promo__title{
+
+@media screen and (max-width: 768px) {
+    .promo {
+        max-width: 728px;
+        margin: 0 auto;
+        margin-top: 33px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    .promo__title {
         width: 75%;
         margin: 0 auto;
         padding: 0;
-        padding-top: 370px;
+        padding-top: 353px;
         padding-bottom: 313px;
         text-align: center;
         font-family: 'Inter';
@@ -50,24 +59,24 @@
         text-align: center;
         letter-spacing: -0.04em;
         color: #FFFFFF;
-        
+
     }
 }
 
 
 
-@media screen and (max-width: 500px){
-    .promo{
+@media screen and (max-width: 500px) {
+    .promo {
         width: 92%;
         margin: 0 auto;
     }
 }
 
 
-@media screen and (max-width: 500px) and (min-width: 320px){
-    .promo__title{
+@media screen and (max-width: 500px) and (min-width: 320px) {
+    .promo__title {
         width: 96%;
-        
+
         margin: 0 auto;
         padding: 0;
         padding-top: 230px;
@@ -76,7 +85,7 @@
         font-weight: 400;
         font-size: 29px;
         line-height: 128%;
-        
-        
+
+
     }
 }

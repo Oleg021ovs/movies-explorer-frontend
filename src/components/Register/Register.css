@@ -182,6 +182,23 @@ width: 100%;
     }
 }
 
+@media (max-width: 768px) {
+    .register {
+        width: 396px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .register__header {
+        display: flex;
+        flex-direction: column;
+        margin-top: 232px;
+    }
+}
+
+
+
 @media (max-width: 755px) and (min-width: 320px) {
     .register {
         width: 300px;

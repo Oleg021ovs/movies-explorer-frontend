@@ -1,11 +1,13 @@
 .aboutme {
-    width: 90%;
+    max-width: 1280px;
     margin: 0 auto;
     background: #202020;
 }
 
 .aboutme__item {
+    max-width: 1140px;
     margin: 0 auto;
+    padding-top: 110px;
 }
 
 .aboutme__description {
@@ -15,16 +17,12 @@
     letter-spacing: -0.04em;
     color: #FFFFFF;
     margin: 0;
-    margin-top: 10px;
+    border-bottom: 1px solid rgba(218, 218, 218, 1);
+    padding-bottom: 23px;
+
 }
 
-.aboutme__line {
-    width: 100%;
-    height: 1px;
-    background: #DADADA;
-    margin: 0 auto;
-    margin-top: 23px;
-}
+
 
 .aboutme__container {
     display: flex;
@@ -112,7 +110,8 @@
     justify-content: space-between;
     margin: 0;
     padding-top: 50px;
-    border-bottom: 1px solid  rgba(230, 230, 230, 1);
+    padding-bottom: 19px;
+    border-bottom: 1px solid  rgba(66, 66, 66, 1);
 }
 
 .aboutme__site:hover {
@@ -140,7 +139,8 @@
     justify-content: space-between;
     margin: 0;
     padding-top: 20px;
-    border-bottom: 1px solid  rgba(230, 230, 230, 1);
+    padding-bottom: 19px;
+    border-bottom: 1px solid  rgba(66, 66, 66, 1);
 }
 
 .aboutme__site-adaptiv:hover {
@@ -154,7 +154,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding-top: 24px;
+    padding-top: 18px;
 }
 
 .aboutme__site-application:hover {
@@ -172,7 +172,7 @@
     letter-spacing: -0.04em;
     color: #FFFFFF;
     margin: 0;
-
+    
 }
 
 
@@ -192,22 +192,34 @@
 
 }
 
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     .aboutme__item {
-        margin: 0 auto;
-        margin-top: 25px;
+        width: 92%;
     }
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 768px) {
+    .aboutme__item {
+        max-width: 668px;
+        padding-top: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .aboutme__link-text {
+        padding-top: 65px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .aboutme__name {
         font-size: 40px;
         line-height: 100%;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .aboutme__speciality {
         font-size: 12px;
         line-height: 150%;
@@ -215,7 +227,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .aboutme__biography {
         font-size: 12px;
         line-height: 150%;
@@ -225,20 +237,13 @@
 }
 
 
-@media screen and (max-width: 800px) {
-    .aboutme__link-text {
-
-        padding-top: 87px;
-    }
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .about__portfolio {
         margin-top: 91px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .aboutme__avatar {
         width: 255px;
         height: 307px;
@@ -247,13 +252,8 @@
     }
 }
 
-@media screen and (max-width: 800px) {
-    .aboutme__site {
-        padding-top: 19px;
-    }
-}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .aboutme__site-text {
         font-size: 28px;
         line-height: 50px;
@@ -261,14 +261,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
-    .aboutme__arrow {
-        width: 27px;
-        height: 60px;
-        font-size: 28px;
 
-    }
-}
 
 @media screen and (max-width: 650px) {
     .aboutme__item {
@@ -296,7 +289,7 @@
 
 @media screen and (max-width: 500px) and (min-width: 320px) {
     .aboutme__item {
-        width: 98%;
+        width: 92%;
     }
 }
 
@@ -306,6 +299,7 @@
         line-height: 22px;
         margin: 0;
         padding: 0;
+        padding-bottom: 28px;
     }
 }
 

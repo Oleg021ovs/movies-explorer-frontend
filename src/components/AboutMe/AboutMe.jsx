@@ -9,7 +9,6 @@ export default function AboutMe() {
     <section className="aboutme" id="aboutme">
       <div className="aboutme__item">
         <h3 className="aboutme__description">Студент</h3>
-        <div className="aboutme__line"></div>
         <div className="aboutme__container">
           <div className="aboutme__group">
             <h2 className="aboutme__name">Виталий</h2>

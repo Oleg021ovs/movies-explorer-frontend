@@ -9,7 +9,6 @@ export default function Footer() {
         <h5 className="footer__film">
           Учебный проект Яндекс.Практикум х BeatFilm.
         </h5>
-        <div className="footer__line"></div>
         <div className="footer__container">
           <p className="footer__copyright">&copy;2023</p>
           <div className="footer__group">

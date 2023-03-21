@@ -5,7 +5,6 @@ export default function Techs() {
     <section className="techs" id="techs">
       <div className="techs__item">
         <h2 className="techs__description">Технологии</h2>
-        <div className="techs__line"></div>
         <div className="techs__container">
           <h1 className="techs__title">7 технологий</h1>
           <p className="techs__text">

@@ -6,6 +6,7 @@ export default function Login() {
   return (
     <>
       <main className="login">
+        
         <div className="login__header">
           <Link to="/" className="login__header-btn">
             <img className="login__header-logo" src={logo} alt="логотип" />
@@ -61,7 +62,6 @@ export default function Login() {
           </div>
         </div>
         </form>
-
         
       </main>
     </>
