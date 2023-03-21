@@ -77,12 +77,13 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
     .footer {
-        margin: 0;
-        
+        width: 96%;
+        margin: 0 auto;
     }
 }
+
 
 @media screen and (max-width: 768px) {
     .footer__item {

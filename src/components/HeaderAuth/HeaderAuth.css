@@ -1,10 +1,16 @@
+.header__auth{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
 .header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 21px;
+    
 }
 
 .header__box {
@@ -73,6 +79,24 @@
 .navigation__icons {
     width: 44px;
     height: 44px;
+
+}
+
+@media screen and (max-width: 1100px) {
+    .header__content {
+        padding: 21px 30px 0 30px ;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .header__content {
+        width: 95%;
+        padding: 0;
+        padding-top: 18px;
+        margin: 0 auto;
+    }
 
 }
 
