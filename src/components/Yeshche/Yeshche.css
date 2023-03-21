@@ -1,0 +1,49 @@
+.yeshche {
+    width: 90%;
+    height: 166px;
+    margin: 0 auto;
+    margin-top: 50px;
+   
+}
+
+.yeshche__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.yeshche__btn {
+    width: 320px;
+    height: 36px;
+    background-color: transparent;
+    border: 1px solid rgba(66, 66, 66, 1);
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.yeshche__btn:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
+@media screen and (max-width: 500px) {
+    .yeshche {
+        width: 90%;
+        height: 70px;
+        margin-top: 50px;
+       
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .yeshche__btn {
+        width: 90%;
+        
+    
+    }
+}

@@ -1,0 +1,144 @@
+.footer {
+    max-width: 1280px;
+    height: 100%;
+    background: #202020;
+    margin-top: 110px;
+    padding: 0;
+}
+
+.footer__item {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer__film {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #8B8B8B;
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid  rgba(66, 66, 66, 1);
+}
+
+
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.footer__copyright {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #8B8B8B;
+    margin: 0;
+}
+
+.footer__group {
+    display: flex;
+    margin: 0;
+    gap: 20px;
+}
+
+.footer__practicum {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    color: #FFFFFF;
+
+}
+
+.footer__practicum:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
+.footer__github {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.footer__github:hover {
+    transition: opacity 0.4s ease;
+    opacity: 0.5;
+
+}
+
+@media screen and (max-width: 1100px) {
+    .footer {
+        width: 96%;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer__item {
+        max-width: 708px;
+        margin-top: 94px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__film {
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 79px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer__item {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer__film {
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 129px;
+        padding-bottom: 23px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        align-items: center;
+        padding-top: 30px;
+        
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer__group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .footer__copyright {
+        margin-top: 27px;
+        
+    }
+}
