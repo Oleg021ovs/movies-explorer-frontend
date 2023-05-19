@@ -51,15 +51,14 @@ useEffect(() => {
     .catch((err) => {
       console.log(err);
     });
-}, [currentUser, token])
+}, [currentUser._id, token])
 
 // Сохранение фильма
 function handleMovieSave(movie) {
   MainApi
-    .createFilm(movie)
+  .createFilm(movie, token)
     .then((newSavedMovie) => {
-      console.log(newSavedMovie);
-      setSavedMovies([newSavedMovie, ...savedMovies]);
+      setSavedMovies((movies) => [newSavedMovie, ...movies]);
     })
     .catch((err) => {
       console.log(err);
@@ -114,10 +113,8 @@ function handleMovieSave(movie) {
 
   // Удаление фильма
   function handleMovieDelete(movie) {
-    console.log("Я в handleMovieDelete");
-    console.log(movie);
     MainApi
-      .deleteFilm(movie._id)
+      .deleteFilm(movie._id, token)
       .then(() => {
         setSavedMovies((movies) => movies.filter((m) => m._id !== movie._id));
       })

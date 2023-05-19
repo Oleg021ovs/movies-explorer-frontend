@@ -21,6 +21,7 @@ export default function MoviesCard({
     return result;
   }
 
+  
   function handleSaveMovieClick() {
     console.log(movie);
     if (isSaved) {
@@ -35,6 +36,11 @@ export default function MoviesCard({
     handleMovieDelete(movie);
   }
   const isSaved = movie.id && savedMovies.some((m) => m.movieId === movie.id);
+  // Создаём переменную, которую после зададим в `className` для кнопки лайка
+  
+  const cardLikeButtonClassName = isSaved
+    ? "movie-card__save-btn"
+    : "movie-card__save-btn_active";
   return (
     <>
       <li className="movies-card">
@@ -53,13 +59,10 @@ export default function MoviesCard({
             <h3 className="movies-card__title">{movie.nameRU}</h3>
             {!savedMovieOk && (
           <button
+          className={cardLikeButtonClassName}
           onClick={handleSaveMovieClick}
-            className={`movie-card__save-btn_active ${
-              isSaved ? "movie-card__save-btn" : ""
-            }`}
-            type="button"
-            
-          ></button>
+          type="button"
+        ></button>
         )}
         {savedMovieOk && (
           <button
