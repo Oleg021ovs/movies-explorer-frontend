@@ -1,4 +1,4 @@
-import "./Yeshche.css";
+/*import "./Yeshche.css";
 
 export default function Yeshche() {
   return (
@@ -10,4 +10,4 @@ export default function Yeshche() {
       </div>
     </section>
   );
-}
+}*/

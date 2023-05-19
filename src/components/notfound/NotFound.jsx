@@ -7,11 +7,8 @@ export default function NotFound(){
 <div className="not__found-box">
 <h1 className="not__found-title">404</h1>
     <p className="not__found-text">Страница не найдена</p>
-    <Link to="/sign-up" className="not__found-link">назад</Link>
+    <Link to="/signup" className="not__found-link">назад</Link>
 </div>
-    
-
-    
 </section>
     )
 }

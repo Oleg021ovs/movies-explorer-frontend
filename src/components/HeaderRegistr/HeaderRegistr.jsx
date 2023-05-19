@@ -12,11 +12,11 @@ export default function HeaderRegistr() {
         </Link>
 
         <div className="header__menu">
-          <Link to="/sign-up" className="header__link header__link-registry">
+          <Link to="/signup" className="header__link header__link-registry">
             Регистрация
           </Link>
 
-          <Link to="/sign-in">
+          <Link to="/signin">
             <button className="header__link-auth">Войти</button>
           </Link>
         </div>
