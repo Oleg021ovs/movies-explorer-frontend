@@ -6,5 +6,14 @@
 + JSX
 + React Fraemwork
 + БЭМ
-+ запустить проект можно командой npm start
-[Ссылка на макет фигма] (https://disk.yandex.ru/d/go6jXkG4rqGdKw/)
+### ReactJs
+### NodeJS
+### Github
+### Nginx
+### Bash
+### Express.js
+### Mongo DB
+### PM2 
+### [Ссылка на мою работу] `frontend/` (http://oleg021diplom.nomoredomains.monster/)
+### [Ссылка на мою работу] `backend/` (https://api.oleg021movies.nomoredomains.work/)
+#
