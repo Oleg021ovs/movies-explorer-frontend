@@ -3,7 +3,7 @@
 ### В этом проекте я использовал JSX, с использованием React Fraemwork CRA, иcпользовал сборку Create-react-app! Cемантическая и адаптивная верстка, Flexbox, Grid Layout,  все написано по методологи БЭМ!))) весь проект верстал в vsCode!
 
 + css Flexbox, Grid Layout 
-+ JSX
++React JSX
 + React Fraemwork
 + БЭМ
 ### ReactJs
