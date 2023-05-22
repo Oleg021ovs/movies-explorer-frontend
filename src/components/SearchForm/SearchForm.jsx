@@ -2,28 +2,38 @@ import { useEffect } from "react";
 import "./SearhForm.css";
 import FormValidation from "../../hooks/FormValidation";
 import find from "../../images/find-3.svg";
-export default function SearchForm({ handleSearchSubmit }) {
-  const { values, handleChange, isValid, resetForm } = FormValidation();
-
-  const isSubmitDisabled = isValid;
-
-  const submitButtonClassName = `searchform__btn ${
-    !isSubmitDisabled && "search-form__btn_inactive"
-  }`;
+export default function SearchForm({
+  handleSearchSubmit,
+  searchErrorText,
+  setSearchErrorText,
+  searchDataText,
+}) {
+  const { values, handleChange } = FormValidation();
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (values.keyWord === " ") {
+      setSearchErrorText("Нужно ввести ключевое слово");
+      return;
+    }
     handleSearchSubmit(values.keyWord);
   }
 
   useEffect(() => {
-    resetForm({}, {}, false);
-  }, [resetForm]);
+    if (searchDataText) {
+      values.keyWord = searchDataText;
+    }
+  }, [searchDataText, values]);
+
+  useEffect(() => {
+    if (searchDataText) {
+      values.keyWord = searchDataText;
+    }
+  }, [searchDataText, values]);
 
   return (
     <section className="search-form">
       <form className="searchform__form" onSubmit={handleSubmit}>
-        
         <div className="searhform__container">
           <input
             value={values.keyWord || ""}
@@ -37,19 +47,12 @@ export default function SearchForm({ handleSearchSubmit }) {
             className="searchform__input"
             required
           />
-          <button
-          type="submit"
-          className={submitButtonClassName}
-          disabled={!isSubmitDisabled}
-        ><img className="searchform__find" src={find} alt="поиск" />
-          
-        </button>
-          
+          <button type="submit" className="searchform__btn">
+            <img className="searchform__find" src={find} alt="поиск" />
+          </button>
         </div>
+        <p className="search-form__input_error">{searchErrorText}</p>
       </form>
     </section>
   );
 }
-/*<button className="searchform__btn" type="submit">
-        <img className="searchform__find" src={find} alt="поиск" />
-      </button>*/

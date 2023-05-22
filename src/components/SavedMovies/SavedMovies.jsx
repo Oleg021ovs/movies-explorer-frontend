@@ -2,7 +2,6 @@ import "./SavedMovies.css";
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import Preloader from "../Preloader/Preloader";
 import Footer from "../Footer/Footer";
 
 export default function SavedMovies({
@@ -23,7 +22,6 @@ export default function SavedMovies({
           handleMovieDelete={handleMovieDelete}
           savedMovies={savedMovies}
         />
-        <Preloader />
       </main>
       <Footer />
     </>

@@ -42,19 +42,16 @@ export const getProfile = (token) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: "GET",
     headers: {
-      "credentials": "include",
-      "Accept": "application/json",
       "Content-Type": "application/json",
       "authorization": `Bearer ${token}`,
     },
   }).then(checkResponse);
 };
 
-export const editProfile = (email, name, token) => {
+export const editProfile = ({email, name, token}) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: "PATCH",
     headers: {
-      "credentials": "include",
       "Accept": "application/json",
       "Content-Type": "application/json",
       "authorization": `Bearer ${token}`,
@@ -67,7 +64,6 @@ export const getFilm = (token) => {
   return fetch(`${BASE_URL}/movies`, {
     method: "GET",
     headers: {
-      "credentials": "include",
       "Accept": "application/json",
       "Content-Type": "application/json",
       "authorization": `Bearer ${token}`,
@@ -79,8 +75,6 @@ export const createFilm = (movie, token) => {
   return fetch(`${BASE_URL}/movies`, {
     method: "POST",
     headers: {
-      "credentials": "include",
-      "mode": "cors",
       "authorization": `Bearer ${token}`,
       "Content-Type": "application/json",
     },

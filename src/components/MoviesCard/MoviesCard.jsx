@@ -21,7 +21,6 @@ export default function MoviesCard({
     return result;
   }
 
-  
   function handleSaveMovieClick() {
     console.log(movie);
     if (isSaved) {
@@ -35,46 +34,49 @@ export default function MoviesCard({
     console.log(movie);
     handleMovieDelete(movie);
   }
+
   const isSaved = movie.id && savedMovies.some((m) => m.movieId === movie.id);
-  // Создаём переменную, которую после зададим в `className` для кнопки лайка
-  
+
   const cardLikeButtonClassName = isSaved
     ? "movie-card__save-btn"
     : "movie-card__save-btn_active";
+
   return (
     <>
       <li className="movies-card">
         <div className="movies-card__item">
           <div className="movies-card__images">
-          <a
-        className="movies-card__link"
-        href={movie.trailerLink}
-        target="_blank"
-        rel="noreferrer"
-      >
-            <img className="movies-card__img" src={image} alt="фильм" />
+            <a
+              className="movies-card__link"
+              href={movie.trailerLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img className="movies-card__img" src={image} alt="фильм" />
             </a>
           </div>
           <div className="movies-card__container">
             <h3 className="movies-card__title">{movie.nameRU}</h3>
             {!savedMovieOk && (
-          <button
-          className={cardLikeButtonClassName}
-          onClick={handleSaveMovieClick}
-          type="button"
-        ></button>
-        )}
-        {savedMovieOk && (
-          <button
-            className="movie-card__delete-saved-btn"
-            type="button"
-            onClick={handleDeleteSavedClick}
-          ></button>
-        )}
+              <button
+                className={cardLikeButtonClassName}
+                onClick={handleSaveMovieClick}
+                type="button"
+              ></button>
+            )}
+            {savedMovieOk && (
+              <button
+                className="movie-card__delete-saved-btn"
+                type="button"
+                onClick={handleDeleteSavedClick}
+              ></button>
+            )}
           </div>
         </div>
         <div className="movies-card__group">
-          <div className="movies-card__duration">{minutesToHours(movie.duration)}</div>
+          <div className="movies-card__duration">
+            {minutesToHours(movie.duration)}
+          </div>
         </div>
       </li>
     </>

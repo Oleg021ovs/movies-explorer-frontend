@@ -1,10 +1,21 @@
 import React from "react";
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
-
-export default function MoviesCardList({ movies, handleMovieSave, handleMovieDelete, savedMovies }) {
+import { useLocation } from "react-router-dom";
+export default function MoviesCardList({
+  movies,
+  handleMovieSave,
+  handleMovieDelete,
+  searchedMovies,
+  savedMovies,
+  searchText,
+}) {
+  const location = useLocation();
   return (
     <section className="movies-card-list">
+      {searchText && (
+        <p className="movies-card-list__search-text">{searchText}</p>
+      )}
       <ul className="movies-card-list__container">
         {movies?.map((movie) => {
           return (
@@ -16,15 +27,21 @@ export default function MoviesCardList({ movies, handleMovieSave, handleMovieDel
               savedMovies={savedMovies}
             />
           );
-        })};
+        })}
+        ;
       </ul>
-      <button
+
+      {location.pathname !== "/saved-movies" &&
+        movies.length > 3 &&
+        movies.length !== searchedMovies.length && (
+          <button
             type="button"
             aria-label="Показать еще фильмы"
             className="movies-card-list__btn"
           >
             Ещё
           </button>
+        )}
     </section>
   );
 }

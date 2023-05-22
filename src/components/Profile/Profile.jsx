@@ -2,9 +2,8 @@ import { useEffect, useState, useContext } from "react";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
 import ProfileForm from "../ProfileForm/ProfileForm";
 import ProfileInput from "../ProfileInput/ProfileInput";
-//import FormValidation from "../../hooks/FormValidation"
 import Header from "../Header/Header";
-function Profile({userLoggedIn, onUpdateUser}) {
+function Profile({ userLoggedIn, onUpdateUser }) {
   const [name, setName] = useState("");
   const [isEmail, setIsEmail] = useState("");
   const currentUser = useContext(CurrentUserContext);
@@ -31,16 +30,17 @@ function Profile({userLoggedIn, onUpdateUser}) {
     setName(currentUser.name || "");
     setIsEmail(currentUser.email || "");
   }, [currentUser]);
-  
+
   return (
     <>
     <Header userLoggedIn={userLoggedIn}/>
       <main className="profile">
         <ProfileForm
-          profileTitle={currentUser.name}
           ProfileButton="Редактировать"
-          ProfileExit="Выйти из аккаунта"
           onSubmit={handleSubmit}
+          profileTitle={currentUser.name}
+          ProfileExit="Выйти из аккаунта"
+          
           
           >
 <ProfileInput
@@ -52,7 +52,6 @@ function Profile({userLoggedIn, onUpdateUser}) {
           placeholder="имя"
           value={name || ""}
           onChange={inputName}
-          
         />
         <ProfileInput
           type="text"
