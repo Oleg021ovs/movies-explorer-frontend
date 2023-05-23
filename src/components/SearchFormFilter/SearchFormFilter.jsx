@@ -5,7 +5,6 @@ export default function SearchFormFilter({
   isSelectedShortMovie,
 }) {
   return (
-    
     <div className="search-form__filter">
       <div className="search-form__filter-container">
         <button

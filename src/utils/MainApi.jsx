@@ -33,7 +33,7 @@ export const checkToken = (token) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      "authorization": `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
 };
@@ -43,18 +43,18 @@ export const getProfile = (token) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      "authorization": `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
 };
 
-export const editProfile = ({email, name, token}) => {
+export const editProfile = ({ email, name, token }) => {
   return fetch(`${BASE_URL}/users/me`, {
     method: "PATCH",
     headers: {
-      "Accept": "application/json",
+      Accept: "application/json",
       "Content-Type": "application/json",
-      "authorization": `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ email, name }),
   }).then(checkResponse);
@@ -64,9 +64,9 @@ export const getFilm = (token) => {
   return fetch(`${BASE_URL}/movies`, {
     method: "GET",
     headers: {
-      "Accept": "application/json",
+      Accept: "application/json",
       "Content-Type": "application/json",
-      "authorization": `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
 };
@@ -75,7 +75,7 @@ export const createFilm = (movie, token) => {
   return fetch(`${BASE_URL}/movies`, {
     method: "POST",
     headers: {
-      "authorization": `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -99,9 +99,9 @@ export const deleteFilm = (movieId, token) => {
   return fetch(`${BASE_URL}/movies/${movieId}`, {
     method: "DELETE",
     headers: {
-      "Accept": "application/json",
+      Accept: "application/json",
       "Content-Type": "application/json",
-      "authorization": `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
 };

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Login.css";
-//import { Link } from "react-router-dom";
 import AuthForm from "../AuthForm/AuthForm";
 import Input from "../Input/Input";
+
 function Login({ handleLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

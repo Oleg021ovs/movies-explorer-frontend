@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Register.css";
-//import { Link } from "react-router-dom";
 import AuthForm from "../AuthForm/AuthForm";
 import Input from "../Input/Input";
+
 function Register({ handleRegister }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,7 +22,7 @@ function Register({ handleRegister }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    handleRegister( name, email, password );
+    handleRegister(name, email, password);
   }
   return (
     <main className="register">

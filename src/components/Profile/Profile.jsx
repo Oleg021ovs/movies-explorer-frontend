@@ -33,38 +33,34 @@ function Profile({ userLoggedIn, onUpdateUser }) {
 
   return (
     <>
-    <Header userLoggedIn={userLoggedIn}/>
+      <Header userLoggedIn={userLoggedIn} />
       <main className="profile">
         <ProfileForm
           ProfileButton="Редактировать"
           onSubmit={handleSubmit}
           profileTitle={currentUser.name}
           ProfileExit="Выйти из аккаунта"
-          
-          
-          >
-<ProfileInput
-          type="text"
-          name="name"
-          minLength="2"
-          maxLength="30"
-          required
-          placeholder="имя"
-          value={name || ""}
-          onChange={inputName}
-        />
-        <ProfileInput
-          type="text"
-          name="email"
-          placeholder="E-mail"
-          required
-          minLength="2"
-          maxLength="40"
-          value={isEmail || ""}
-          onChange={inputEmail}
-          
-        />
-
+        >
+          <ProfileInput
+            type="text"
+            name="name"
+            minLength="2"
+            maxLength="30"
+            required
+            placeholder="имя"
+            value={name || ""}
+            onChange={inputName}
+          />
+          <ProfileInput
+            type="text"
+            name="email"
+            placeholder="E-mail"
+            required
+            minLength="2"
+            maxLength="40"
+            value={isEmail || ""}
+            onChange={inputEmail}
+          />
         </ProfileForm>
       </main>
     </>
