@@ -1,112 +1,128 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
-import MoviesCard from "../MoviesCard/MoviesCard";
+import SearchFormFilter from "../SearchFormFilter/SearchFormFilter";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-
-import Yeshche from "../Yeshche/Yeshche";
 import Footer from "../Footer/Footer";
-import card from "../../images/card1.svg";
-import card2 from "../../images/card2.svg";
-import card3 from "../../images/card3.svg";
-import card4 from "../../images/card4.svg";
-import card5 from "../../images/card5.svg";
-import card6 from "../../images/card6.svg";
-import card7 from "../../images/card7.svg";
-import card12 from "../../images/card12.svg";
-import card13 from "../../images/card13.svg";
-import card14 from "../../images/card14.svg";
+import "./Movies.css";
+import * as MoviesApi from "../../utils/MoviesApi";
+import Preloader from "../Preloader/Preloader";
 
-export default function Movies({ loggenIn }) {
+export default function Movies({
+  userLoggedIn,
+  token,
+  movies,
+  setMovies,
+  savedMovies,
+  handleMovieSave,
+  handleMovieDelete,
+}) {
+  const [allMovies, setAllMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [searchedMovies, setSearchedMovies] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const localStorageData = JSON.parse(localStorage.getItem("localStorageData"));
+  const [searchDataText, setSearchDataText] = useState("");
+  const [searchErrorText, setSearchErrorText] = useState("");
+  const [isSelectedShortMovie, setIsSelectedIsShortMovie] = useState(false);
+
+  useEffect(() => {
+    if (localStorageData) {
+      setSearchDataText(localStorageData.search);
+      setSearchedMovies(localStorageData.movies);
+      if (localStorageData.movies.length === 0) {
+        setSearchText("Ничего не найдено");
+      }
+    }
+    if (localStorage) {
+      setIsSelectedIsShortMovie(JSON.parse(localStorage.getItem("ShortFilms")));
+    }
+  }, []);
+
+  // Поиск фильмов с api
+  // eslint-disable-next-line no-redeclare
+  function handleSearchSubmit(values) {
+    setSearchErrorText("");
+    setSearchText("");
+
+    if (allMovies.length === 0) {
+      setIsLoading(true);
+      MoviesApi.getInitialMovies()
+        .then((movies) => {
+          setAllMovies(movies);
+          searchMovies(movies, values);
+        })
+        .catch((err) => {
+          console.log(err);
+          setSearchText(
+            "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен.Подождите немного и попробуйте ещё раз."
+          );
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    }
+  }
+
+  function getSearchMovieList(movies, values) {
+    return movies.filter((movie) => {
+      return movie.nameRU.toLowerCase().includes(values.toLowerCase());
+    });
+  }
+
+  function searchMovies(movies, values) {
+    const searchedMovies = getSearchMovieList(movies, values);
+    const viewMovies = searchedMovies.slice(0);
+
+    const localStorageData = { search: values, movies: searchedMovies };
+    localStorage.setItem("localStorageData", JSON.stringify(localStorageData));
+
+    setSearchedMovies(searchedMovies);
+
+    setAllMovies(viewMovies);
+    if (searchedMovies.length === 0) {
+      setSearchText("Ничего не найдено");
+    }
+  }
+
+  // Короткометражки
+  function handleChangeShortMovie() {
+    setIsSelectedIsShortMovie(!isSelectedShortMovie);
+    localStorage.setItem("ShortFilms", JSON.stringify(!isSelectedShortMovie));
+  }
+
+   
+  movies = isSelectedShortMovie
+    ? movies.filter((m) => m.duration > 40)
+    : movies.filter((m) => m.duration < 40);
+
+
+
   return (
     <>
-      <Header loggenIn={loggenIn} />
-
-      <SearchForm />
-      <MoviesCardList>
-        <MoviesCard
-          moviesImages={card}
-          moviesTitle="33 слова о дизайне"
-          moviesDuration="1ч42м"
+      <Header userLoggedIn={userLoggedIn} />
+      <main className="movies">
+        <SearchForm
+          handleSearchSubmit={handleSearchSubmit}
+          searchErrorText={searchErrorText}
+          setSearchErrorText={setSearchErrorText}
+          searchDataText={searchDataText}
         />
-        <MoviesCard
-          moviesImages={card2}
-          moviesTitle="Киноальманах «100 лет дизайна»"
-          moviesDuration="1ч42м"
+        <SearchFormFilter
+          handleChangeShortMovie={handleChangeShortMovie}
+          isSelectedShortMovie={isSelectedShortMovie}
         />
-        <MoviesCard
-          moviesImages={card3}
-          moviesTitle="В погоне за Бенкси"
-          moviesDuration="1ч42м"
+        {isLoading && <Preloader />}
+        <MoviesCardList
+          movies={movies}
+          handleMovieSave={handleMovieSave}
+          handleMovieDelete={handleMovieDelete}
+          savedMovies={savedMovies}
+          searchedMovies={searchedMovies}
+          searchText={searchText}
         />
-        <MoviesCard
-          moviesImages={card4}
-          moviesTitle="Баския: Взрыв реальности"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card5}
-          moviesTitle="Бег это свобода"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card6}
-          moviesTitle="Книготорговцы"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card7}
-          moviesTitle="Когда я думаю о Германии ночью"
-          moviesDuration="1ч42м"
-        />
-        
-        <MoviesCard
-          moviesImages={card12}
-          moviesTitle="По волнам: Искусство звука в кино"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card12}
-          moviesTitle="Рудбой"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card13}
-          moviesTitle="Скейт — кухня"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card14}
-          moviesTitle="Война искусств"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card}
-          moviesTitle="33 слова о дизайне"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card12}
-          moviesTitle="Рудбой"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card13}
-          moviesTitle="Скейт — кухня"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card14}
-          moviesTitle="Война искусств"
-          moviesDuration="1ч42м"
-        />
-        <MoviesCard
-          moviesImages={card}
-          moviesTitle="33 слова о дизайне"
-          moviesDuration="1ч42м"
-        />
-      </MoviesCardList>
-      <Yeshche />
-
+      </main>
       <Footer />
     </>
   );

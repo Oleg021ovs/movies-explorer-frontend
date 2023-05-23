@@ -1,65 +1,70 @@
-import { Link } from "react-router-dom";
-import "./Profile.css";
-//import Navigation from "../Navigation/Navigation";
+import { useEffect, useState, useContext } from "react";
+import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
+import ProfileForm from "../ProfileForm/ProfileForm";
+import ProfileInput from "../ProfileInput/ProfileInput";
 import Header from "../Header/Header";
-export default function Profile({loggenIn}) {
+function Profile({ userLoggedIn, onUpdateUser }) {
+  const [name, setName] = useState("");
+  const [isEmail, setIsEmail] = useState("");
+  const currentUser = useContext(CurrentUserContext);
+
+  function inputName(e) {
+    setName(e.target.value);
+  }
+  function inputEmail(e) {
+    setIsEmail(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    // Запрещаем браузеру переходить по адресу формы
+    e.preventDefault();
+
+    // Передаём значения управляемых компонентов во внешний обработчик
+    onUpdateUser({
+      name,
+      email: isEmail,
+    });
+  }
+
+  useEffect(() => {
+    setName(currentUser.name || "");
+    setIsEmail(currentUser.email || "");
+  }, [currentUser]);
+
   return (
     <>
-      <Header loggenIn={loggenIn}/>
+      <Header userLoggedIn={userLoggedIn} />
       <main className="profile">
-        <h1 className="profile__title">Привет, Виталий!</h1>
-        <div className="profile__container">
-          <div className="profile-input__container">
-            <div className="profile-input__group">
-              <label className="profile__text">Имя</label>
-              <input
-                className="profile__input"
-                type="text"
-                id="profile-name"
-                name="profile-name"
-                placeholder=" "
-                defaultValue="Виталий"
-                minLength="2"
-                maxLength="40"
-                required
-              />
-            </div>
-          </div>
-          
-          <div className="profile-input__container">
-            <div className="profile-input__group">
-              <label className="profile__text">E-mail</label>
-              <input
-                className="profile__input"
-                type="email"
-                placeholder=" "
-                defaultValue="vetal@yandex.ru"
-                required
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="profile-btn__container">
-          <button
-            aria-label="Редактировать профиль"
-            type="submit"
-            className="profile__button"
-          >
-            Редактировать
-          </button>
-
-          <Link to="/sign-in" className="profile-exit__link">
-            <button
-              aria-label="выйти из профиля"
-              type="submit"
-              className="profile-exit__button"
-            >
-              Выйти из аккаунта
-            </button>
-          </Link>
-        </div>
+        <ProfileForm
+          ProfileButton="Редактировать"
+          onSubmit={handleSubmit}
+          profileTitle={currentUser.name}
+          ProfileExit="Выйти из аккаунта"
+        >
+          <ProfileInput
+            type="text"
+            name="name"
+            minLength="2"
+            maxLength="30"
+            required
+            placeholder="имя"
+            value={name || ""}
+            onChange={inputName}
+          />
+          <ProfileInput
+            type="text"
+            name="email"
+            placeholder="E-mail"
+            required
+            minLength="2"
+            maxLength="40"
+            value={isEmail || ""}
+            onChange={inputEmail}
+          />
+        </ProfileForm>
       </main>
     </>
   );
 }
+
+export default Profile;
